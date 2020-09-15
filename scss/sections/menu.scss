@@ -1,0 +1,163 @@
+.title {
+    font-family: 'Play-Bold';
+    font-size: rem(32px);
+    color: #2f2f2f;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 5% 3% 0 0;
+    @include phones {
+        margin-right: 0;
+        font-size: rem(28px);
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4%;
+        margin-left: 2%;
+        margin-right: 2%;
+        @include phones {
+            flex-direction: column;
+        }
+    }
+    &__item {
+       width: 33.3%;
+       position: relative;
+       padding-left: 1%;
+       &:first-child {
+           padding-left: 0;
+       }
+       @include phones {
+           width: 100%;
+           margin-bottom: 10%;
+       }
+    }
+    &__pic {
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+        max-height: 100%;
+        height: rem(295px);
+        
+    }
+    &__title {
+        opacity: 0;
+        position: absolute;
+        top: 26%;
+        left: 33%;
+        font-family: 'Play-Bold';
+        font-size: rem(40px);
+        color: #000000;
+        text-transform: uppercase;
+        &-tea {
+            left: 42%;
+        }
+    }
+    &__btn {
+       text-align: center;
+       margin-top: 3%;
+       margin-right: 3%;
+       @include phones {
+           margin-right: 0;
+       }
+    }
+}
+.coffee {
+    background-image: url('../img/coffee.jpg');
+    
+    &:hover {
+        background-image: url('../img/coffee1.jpg');
+        transition: 1s ease;
+        & + .menu__title {
+            opacity: 1;
+            transition: 1s ease;
+            @include tablets {
+                opacity: 0;
+            }
+            @include phones {
+                opacity: 0;
+            }
+        }
+    }
+}
+.tea {
+    background-image: url('../img/tea.jpg');
+    &:hover {
+        background-image: url('../img/tea1.jpg');
+        transition: 1s ease;
+        & + .menu__title {
+            opacity: 1;
+            transition: 1s ease;
+            @include tablets {
+                opacity: 0;
+            }
+            @include phones {
+                opacity: 0;
+            }
+        }
+    }
+}
+.dessert {
+    background-image: url('../img/dessert.jpg');
+    &:hover {
+        background-image: url('../img/dessert1.jpg');
+        transition: 1s ease;
+        & + .menu__title {
+            opacity: 1;
+            transition: 1s ease;
+            @include tablets {
+                opacity: 0;
+            }
+            @include phones {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.price {
+    margin-top: 11%;
+    &__item {
+       display: flex;
+       justify-content: space-between;
+       padding: 0 15% 2.5%;
+       @include tablets {
+           padding: 0 6% 5%;
+       }
+       @media only screen and (min-width: 481px) and (max-width: 767px) {
+           line-height: 1.4;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+       }
+    }
+    &__name {
+        font-family: 'Lato-Heavy';
+        font-size: rem(16px);
+        color: #28211f;
+        @media only screen and (min-width: 481px) and (max-width: 767px) {
+            text-align: center;
+        }
+    }
+    &__cost {
+        font-family: 'Lato-Medium';
+        font-size: rem(16px);
+        color: #28211f;
+    }
+}
+
+.btn-link {
+    display: inline-block;
+    font-family: 'Lato-Heavy';
+    font-size: rem(13px);
+    color: #39312f;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: rem(2px) solid #39312f;
+    padding: rem(20px) rem(60px);
+    @include phones {
+        padding: rem(15px) rem(40px);
+    }
+}

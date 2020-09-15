@@ -1,0 +1,79 @@
+.first-screen {
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    @include tablets {
+        background-image: url('../img/bg-tab.jpg');
+    }
+    @include phones {
+        background-image: url('../img/bg-phone.jpg');
+    }
+    &__title {
+        font-family: 'Play-Bold';
+        font-size: rem(48px);
+        color: #f5d76e;
+        margin-top: 22.2%;
+        margin-left: 12.5%;
+        @include tablets {
+            margin-top: 28%;
+        }
+        @include phones {
+            margin-top: 40%;
+            margin-left: 0;
+            text-align: center;
+            font-size: rem(38px);
+
+        }
+    }
+    &__text {
+        font-family: 'Lato-Medium';
+        font-size: rem(16px);
+        color: #fff;
+        margin-left: 12.5%;
+        margin-top: -1.3%;
+        max-width: 34%;
+        line-height: 1.5;
+        @media only screen and (min-width: 481px) and (max-width: 767px) {
+            margin-top: 6%;
+            line-height: 1.6;
+        }
+        @include phones {
+            margin-left: 15%;
+            margin-top: 8%;
+            max-width: 70%;
+        }
+    }
+    &__btn {
+        margin-left: 12.5%;
+        margin-top: 2%;
+        @media only screen and (min-width: 481px) and (max-width: 767px) {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        @include phones {
+            margin-top: 10%;
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+}
+
+.btn {
+    font-family: 'Lato-Heavy';
+    font-size: rem(13px);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: rem(20px) rem(60px);
+    border: rem(2px) solid #fff;
+    @include phones {
+        padding: rem(15px) rem(40px);
+    }
+}
+
+
+  

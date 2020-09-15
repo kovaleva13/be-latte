@@ -1,0 +1,47 @@
+.footer {
+    background-color: #39312f;
+    text-align: center;
+    &__social {
+        display: flex;
+        justify-content: center;
+    }
+    &__adress {
+        font-family: 'Lato-Bold';
+        font-size: rem(16px);
+        color: #fff;
+        padding: 3% 2% 3% 0;
+    }
+}
+
+.icon {
+     width: 100%;
+     margin-top: 7%;
+     padding-right: 4%;
+
+     &__link {
+         display: inline-block;
+         background: url('../img/sprite.png') 0 0 no-repeat;
+         height: rem(25px);
+         width: rem(25px);
+         margin-right: 2%;
+       &:hover {
+          background: url('../img/sprite.png') 0 rem(-100px)  no-repeat;
+        }
+       &-tw {
+          background: url('../img/sprite.png') rem(-100px) 0 no-repeat;
+          height: rem(20px);
+        &:hover {
+            background: url('../img/sprite.png') rem(-100px) rem(-100px) no-repeat;
+          }
+        }
+       &-ig {
+          background: url('../img/sprite.png') rem(-200px) 0 no-repeat;
+          height: rem(24px);
+          margin-right: 0;
+          &:hover {
+            background: url('../img/sprite.png') rem(-200px) rem(-100px) no-repeat;
+           }
+        }
+      }
+}
+

@@ -1,0 +1,107 @@
+.location {
+    &__content {
+        display: flex;
+        margin-top: 4%;
+        @include phones {
+            flex-direction: column;
+        }
+    }
+}
+.contacts {
+   background-color: #f5d76e;
+   width: 38%;
+   @include phones {
+       width: 100%;
+       text-align: center;
+       padding-bottom: 5%;
+   }
+   &__title {
+       font-family: 'Play-Bold';
+       font-size: rem(20px);
+       color: #28211f;
+       text-transform: uppercase;
+       margin-top: 11%;
+       margin-left: 11%;
+       @include phones {
+           margin-left: 0;
+           font-size: rem(18px);
+       }
+       &--happy {
+           margin-top: 8%;
+       }
+   }
+   &__text {
+       font-family: 'Lato-Semibold';
+       font-size: rem(16px);
+       color: #28211f;
+       margin-top: 3%;
+       margin-left: 11%;
+       line-height: 1.4;
+       @media only screen and (min-width: 481px) and (max-width: 767px) {
+           margin: 5% 11% 0 11%;
+           line-height: 1.5;
+        }
+        @include phones {
+            margin-left: 0;
+            font-size: rem(14px);
+        }
+   }
+   &__schedule {
+    margin-top: 4%;
+    margin-left: 11%;
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+        margin-right: 11%;
+        line-height: 1.5;
+    }
+    @include phones {
+        margin-left: 0;
+    }
+       &-happy {
+        margin-bottom: 12%;
+    }
+   }
+}
+
+.schedule {
+    display: flex;
+    justify-content: space-between;
+    max-width: rem(172px);
+    margin-bottom: 3%;
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+        flex-direction: column;
+        margin-bottom: 10%;
+    }
+    @include phones {
+        justify-content: center;
+        max-width: 100%;
+        align-items: center;
+    }
+    &__day {
+        font-family: 'Lato-Bold';
+        font-size: rem(16px);
+        color: #28211f;
+        @include phones {
+            font-size: rem(14px);
+        }
+    }
+    &__time {
+        font-family: 'Lato-Regular';
+        font-size: rem(16px);
+        color: #28211f;
+        @include phones {
+            margin-left: 5%;
+            font-size: rem(14px);
+        }
+    }
+}
+
+.location__map {
+    width: 62%;
+    height: rem(425px);
+    @include phones {
+        min-width: rem(300px);
+        width: 100%;
+        padding: 2%;
+        height: rem(200px);
+    }
+}

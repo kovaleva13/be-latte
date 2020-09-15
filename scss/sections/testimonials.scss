@@ -1,0 +1,27 @@
+.testimonials {
+    &__content {
+        margin-top: 4%;
+        display: flex;
+        @include phones {
+            flex-direction: column;
+        }
+    }
+    &__img {
+            background: url('../img/bg2.jpg');
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: cover;
+        height: rem(425px);
+        width: 62%;
+        @include tablets {
+            background: url('../img/bg2-tab.jpg');
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: cover;
+        }
+        @include phones {
+            display: none;
+        }
+        
+    }
+}
